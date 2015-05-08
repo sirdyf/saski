@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Hello World</title>
+    </head>
+    <body>
+        <div id="left_panel">
+            <table>
+                <tbody id="board">
+                    <th> </th>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>C</th>
+                    <th>D</th>
+                    <th>E</th>
+                    <th>F</th>
+                    <th>G</th>
+                    <th>H</th>        
+                    <tr id="first_line">
+                        <td class="s_column">1</td>
+                        <td class="white"></td>
+                        <td class="black"></td>
+                        <td class="white">A</td>
+                        <td class="black">B</td>
+                        <td class="white">C</td>
+                        <td class="black"></td>
+                        <td class="white"></td>
+                        <td class="black"></td>
+                    </tr>
+                    <tr id="second_line">
+                        <td class="s_column">2</td>
+                        <td class="black"></td>
+                        <td class="white"></td>
+                        <td class="black"></td>
+                        <td class="white"></td>
+                        <td class="black"></td>
+                        <td class="white"></td>
+                        <td class="black"></td>
+                        <td class="white">E</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="right_panel">
+            <ul>
+                <li>Select sample:</li>
+            </ul>
+            <div>
+                <p id='selectSamples'>
+                </p>
+            </div>
+        </div>
+        <div id="down_panel">
+            <p>
+                <b>Notation:</b>
+                <input type="text" size="40" id='notifText' readonly/>
+                <button id='commit' onclick=commitButtonClick()>Step</button>
+                <button id='undo' onclick=undoButtonClick()>Undo</button>
+            </p>
+            <p>
+                <b id='currentPlayer'>Now play: </b>
+                <!-- <button id='currentPlayerButton' onclick=changePlayerButtonClick()>White</button> -->
+                <b id='currentPlayerButton'>White</b>
+            </p>
+            <p>
+                <b>Tools: </b>
+                <button id='exportButton' onclick=exportButtonClick()>Export</button>
+            </p>
+        </div>
+        <script src="js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="js/parse.js"></script>      
+        <script type="text/javascript" src="js/render.js"></script>      
+        <script type="text/javascript" src="js/utils.js"></script>      
+        <script type="text/javascript" src="js/index.js"></script>      
+    </body>
+</html>

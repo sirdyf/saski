@@ -1,0 +1,151 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #E4E4E4)
+    );
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    text-transform:uppercase;
+    width:100%;
+}
+
+/* Portrait layout (default) */
+.app {
+    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    text-align:center;
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+td,th {
+    width:50px;
+    text-align: center;
+}
+tr {
+    height:50px;
+}
+.white{
+    background-color:gray;
+    color:black;
+}
+.black{
+    background-color:black;
+    color:white;
+}
+#left_panel{
+    color:red;
+    float:left;
+}
+#right_panel{
+    color:red;
+    float:left;
+    width: 250px;
+    background-color: gray;
+    margin-left: 20px;
+}
+#down_panel{
+    color:black;
+    clear:both;
+}
+.s_column{
+    color:red;
+}
+.s_black{
+    color:red;
+}
+.markGreen{
+    border: inset green; /* Параметры границы */
+    width:44px;
+    height:42px;
+}
+.selWhiteFigure{
+    border: inset yellow; /* Параметры границы */
+    width:44px;
+    height:42px;
+}
+.markWhite{
+    border: inset yellow; /* Параметры границы */
+    width:44px;
+    height:42px;
+}
+.selBlackFigure{
+    border: inset blue; /* Параметры границы */
+    width:44px;
+    height:42px;
+}
+.markBlack{
+    border: inset blue; /* Параметры границы */
+    width:44px;
+    height:42px;
+}
+.white_figure{
+    background:black url(../img/white.png) no-repeat center top; /* 170px x 200px */
+    background-size:contain;
+}
+.white_figure_high{
+    background:black url(../img/white-2.png) no-repeat center top; /* 170px x 200px */
+    background-size:contain;
+}
+.black_figure{
+    background:black url(../img/black.png) no-repeat center top; /* 170px x 200px */
+    background-size:contain;
+}
+.black_figure_high{
+    background:black url(../img/black-2.png) no-repeat center top; /* 170px x 200px */
+    background-size:contain;
+}
+p#selectSamples button{
+  width:80px;
+  display:inline-block;
+  overflow: auto;
+  /*white-space: nowrap;*/
+  /*margin:0px auto;*/
+  /*border:1px red solid;*/
+}
+.markRed{
+    border: inset red; /* Параметры границы */
+    width:44px;
+    height:42px;
+}
